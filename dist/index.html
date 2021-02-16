@@ -18,6 +18,43 @@
     <link rel="stylesheet" href="css/index.min.css" />
   </head>
   <body>
+    <section class="start active">
+      <section class="start__content">
+        <header class="start__header">
+          <h1>FindBike</h1>
+        </header>
+        <form class="start__form" id="location-form">
+          <div class="form__control">
+            <label for="country">Country</label>
+            <select id="country">
+              <option value="">Select country</option>
+            </select>
+          </div>
+          <div class="form__control">
+            <label for="city">City</label>
+            <select id="city">
+              <option value="">Select city</option>
+            </select>
+          </div>
+          <button type="submit" class="form__button">Find</button>
+        </form>
+      </section>
+      <section class="start__image">
+        <img src="image/undraw_Ride_a_bicycle_2yok.svg" alt="bike" />
+      </section>
+      <p class="copyright">
+        &copy; Created by
+        <a
+          href="https://martazaorska.github.io/portfolio"
+          rel="noreferrer"
+          rel="noopener"
+          target="_blank"
+          >Marta Zaorska</a
+        >
+        <span id="year">2021</span>
+      </p>
+    </section>
+    <main class="main"></main>
     <script
       defer
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
