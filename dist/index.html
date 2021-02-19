@@ -54,7 +54,52 @@
         <span id="year">2021</span>
       </p>
     </section>
-    <main class="main"></main>
+    <main class="main">
+      <section class="main__content">
+        <button class="scroll__button">
+          <i class="fas fa-angle-up"></i>
+        </button>
+        <header class="main__header">
+          <div class="main__title">
+            <img src="image/app_icon_256x256.png" alt="logo - map marker" />
+            <h3 class="location">City, Country</h3>
+          </div>
+          <div class="main__controls">
+            <button id="change-location" class="main__button">
+              <i class="far fa-edit"></i>
+            </button>
+            <button id="open-map" class="main__button mobile">
+              <i class="fas fa-map-marked-alt"></i>
+            </button>
+          </div>
+        </header>
+        <form id="search-form" class="main__form">
+          <input type="text" id="search-input" placeholder="Search" />
+          <button class="search__button" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <section class="stations"></section>
+        <div class="loader">
+          <div class="loader__item"></div>
+        </div>
+      </section>
+      <section class="map__container">
+        <div class="map__buttons horizontal">
+          <button id="my-position"><i class="fas fa-street-view"></i></button>
+          <button id="close-map" class="mobile">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="map__buttons vertical">
+          <button id="zoom-in"><i class="fas fa-plus"></i></button>
+          <button id="zoom-out"><i class="fas fa-minus"></i></button>
+        </div>
+        <div class="map__wrapper">
+          <div id="map"></div>
+        </div>
+      </section>
+    </main>
     <script
       defer
       src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
