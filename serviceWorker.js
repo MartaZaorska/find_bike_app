@@ -6,8 +6,6 @@ const cacheAssets = [
   '/main.js',
   '/image/undraw_Ride_a_bicycle_2yok.svg',
   '/image/app_icon_256x256.png',
-  '/image/blue_pin_30x40.png',
-  '/image/pin_30x40.png',
   'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap',
   'https://use.fontawesome.com/releases/v5.15.2/css/all.css',
 ];
