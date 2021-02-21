@@ -1,0 +1,31 @@
+{
+  "name": "FindBike",
+  "short_name": "FindBike",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "./image/app_icon_64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/app_icon_96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/app_icon_144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/app_icon_256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

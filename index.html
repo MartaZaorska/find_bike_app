@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Search bike networks in many cities." />
+    <link rel="icon" href="./image/app_icon_32x32.png" />
+    <link rel="apple-touch-icon" href="./image/app_icon_32x32.png" />
+    <link rel="manifest" href="manifest.json" />
+    <title>FINDBike</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.min.css" />
+  </head>
+  <body>
+    <section class="start active">
+      <section class="start__content">
+        <header class="start__header">
+          <h1>FindBike</h1>
+        </header>
+        <form class="start__form" id="location-form">
+          <div class="form__control">
+            <label for="country">Country</label>
+            <select id="country">
+              <option value="">Select country</option>
+            </select>
+          </div>
+          <div class="form__control">
+            <label for="city">City</label>
+            <select id="city">
+              <option value="">Select city</option>
+            </select>
+          </div>
+          <button type="submit" class="form__button">Find</button>
+        </form>
+      </section>
+      <section class="start__image">
+        <img src="image/undraw_Ride_a_bicycle_2yok.svg" alt="bike" />
+      </section>
+      <p class="copyright">
+        &copy; Created by
+        <a
+          href="https://martazaorska.github.io/portfolio"
+          rel="noreferrer"
+          rel="noopener"
+          target="_blank"
+          >Marta Zaorska</a
+        >
+        <span id="year">2021</span>
+      </p>
+    </section>
+    <main class="main">
+      <section class="main__content">
+        <button class="scroll__button">
+          <i class="fas fa-angle-up"></i>
+        </button>
+        <header class="main__header">
+          <div class="main__title">
+            <img src="image/app_icon_256x256.png" alt="logo - map marker" />
+            <h3 class="location">City, Country</h3>
+          </div>
+          <div class="main__controls">
+            <button id="change-location" class="main__button">
+              <i class="far fa-edit"></i>
+            </button>
+            <button id="open-map" class="main__button mobile">
+              <i class="fas fa-map-marked-alt"></i>
+            </button>
+          </div>
+        </header>
+        <form id="search-form" class="main__form">
+          <input type="text" id="search-input" placeholder="Search" />
+          <button class="search__button" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <section class="stations"></section>
+        <div class="loader">
+          <div class="loader__item"></div>
+        </div>
+      </section>
+      <section class="map__container">
+        <div class="map__buttons horizontal">
+          <button id="my-position"><i class="fas fa-street-view"></i></button>
+          <button id="close-map" class="mobile">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="map__buttons vertical">
+          <button id="zoom-in"><i class="fas fa-plus"></i></button>
+          <button id="zoom-out"><i class="fas fa-minus"></i></button>
+        </div>
+        <div class="map__wrapper">
+          <div id="map"></div>
+        </div>
+      </section>
+    </main>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    ></script>
+    <script defer src="main.js"></script>
+  </body>
+</html>
