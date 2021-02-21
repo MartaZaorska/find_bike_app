@@ -35,13 +35,6 @@ class Map {
   }
 
   createMarker(station, cb) {
-    const icon = L.icon({
-      iconUrl: '/image/blue_pin_30x40.png',
-      iconSize: [30, 40],
-      iconAnchor: [15, 40],
-      popupAnchor: [0, -40],
-    });
-
     const freeBikes =
       station.free_bikes === null
         ? ''
@@ -52,7 +45,7 @@ class Map {
         ? ''
         : `Empty slots <span>${station.empty_slots}</span></br>`;
 
-    const marker = L.marker(station.coords, { icon });
+    const marker = L.marker(station.coords);
 
     marker.bindTooltip(station.name);
     marker.bindPopup(`
@@ -78,15 +71,7 @@ class Map {
 
   myPosition(coords) {
     if (this.markers['user']) this.markers['user'].remove(this.map);
-
-    const icon = L.icon({
-      iconUrl: '/image/pin_30x40.png',
-      iconSize: [30, 40],
-      iconAnchor: [15, 40],
-      popupAnchor: [0, -40],
-    });
-
-    const marker = L.marker(coords, { icon });
+    const marker = L.marker(coords);
     marker.bindTooltip('My position');
     marker.bindPopup(`<p class="popup"><span>My position</span></p>`);
     marker.addTo(this.map);
